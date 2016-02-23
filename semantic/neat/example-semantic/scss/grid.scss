@@ -1,0 +1,55 @@
+@import "../bourbon/bourbon";
+@import "../neat/neat";
+
+$tablet: new-breakpoint(min-width 768px 12);
+$small: new-breakpoint(min-width 1px 6);
+$max-width: 1180px;
+
+.content {
+  @include outer-container;
+}
+
+@include media($tablet) {
+
+	.smallest-col {
+		@include span-columns(1);
+	}
+  .small-ad { 
+		@include span-columns(2); 
+	}
+  .medium-ad { 
+		@include span-columns(3); 
+	}
+	.article {
+		@include span-columns(6); 
+	}
+	.large-ad {
+		@include span-columns(4); 
+	}
+	.section {
+		@include span-columns(8); 
+	}
+	.details {
+		@include span-columns(5); 
+	}
+	.about-us {
+		@include span-columns(7); 
+	}
+	.gallery {
+		@include span-columns(6); 
+	}
+	.copy {
+		@include span-columns(9); 
+	}
+	.full-ad {
+		@include span-columns(10); 
+	}
+	.wide-section {
+		@include span-columns(11); 
+	}
+	.small-ad-indended {
+		@include span-columns(2); 
+		@include shift(1);
+	}
+
+}

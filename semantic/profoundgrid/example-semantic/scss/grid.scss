@@ -1,0 +1,75 @@
+@import "_grid-settings.scss";
+
+@media screen and (min-width: 768px) {
+	.content {
+		max-width: 1180px;
+		margin: 0 auto;
+		@include container();
+		@include clearfix();	
+	}
+	.smallest-col {
+		@include column(1);
+	}
+	@include generate_grid_positions_legacy(".smallest-col", 1);
+	.small-ad,
+	.small-ad-indended {
+		@include column(2);
+	}
+	.small-ad-indended {
+		@include push(1);
+	}
+	@include generate_grid_positions_legacy(".small-ad", 2);
+//	@include generate_grid_positions_legacy(".small-ad-indended", 2);
+	.medium-ad {
+		@include column(3);
+	}
+	@include generate_grid_positions_legacy(".medium-ad", 3);
+	.quarter-ad {
+		@include column(3);
+	}
+	@include generate_grid_positions_legacy(".quarter-ad", 3);
+
+	
+	.article {
+		@include column(6);
+	}
+	@include generate_grid_positions_legacy(".article", 6);
+	
+	.large-ad {
+		@include column(4);
+	}
+	@include generate_grid_positions_legacy(".large-ad", 4);
+	.section,
+	.section-indended {
+		@include column(8);
+	}
+	.section-indended {
+		@include push(1);
+	}
+	@include generate_grid_positions_legacy(".section", 8);
+	@include generate_grid_positions_legacy(".section-indended", 8);
+	.details {
+		@include column(5);
+	}
+	@include generate_grid_positions_legacy(".details", 5);
+	.about-us {
+		@include column(7);
+	}
+	@include generate_grid_positions_legacy(".about-us", 7);
+	.gallery {
+		@include column(6);
+	}
+	@include generate_grid_positions_legacy(".gallery", 6);
+	.copy {
+		@include column(9);
+	}
+	@include generate_grid_positions_legacy(".copy", 9);
+	.full-ad {
+		@include column(10);
+	}
+	@include generate_grid_positions_legacy(".full-ad", 10);
+	.wide-section {
+		@include column(11);
+	}
+	@include generate_grid_positions_legacy(".wide-section", 11);
+}

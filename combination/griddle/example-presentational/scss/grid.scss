@@ -1,0 +1,8 @@
+@import "griddle";
+
+@include griddle-build(12, -mobile);
+
+// Create 12 column grids
+@media (min-width: 768px) {
+	@include griddle-build(12, -desktop);
+}
