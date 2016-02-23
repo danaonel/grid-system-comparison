@@ -1,0 +1,21 @@
+@import "griddle";
+
+@include griddle-build(12, -mobile);
+
+// Create 12 column grids
+@media (min-width: 768px) {
+	@include griddle-build(12, -desktop);
+	.article {
+		width: 550px;
+		float: right;
+	}
+	.section {
+		width: 650px;
+		float: right;
+	}
+}
+@media (min-width: 1000px) {
+	.section {
+		width: 850px;
+	}
+}

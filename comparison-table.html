@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="format-detection" content="telephone=yes" />
+	<meta name="viewport" content="user-scalable=yes, initial-scale=1, maximum-scale=1.5, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,700,300,600,800,400' rel='stylesheet' type='text/css'>
+  <title>Responsive Grid Systems Comparison</title>
+  <style>
+  * {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color: #333;
+  }
+  ul:not(.list), ul:not(.list) li  {
+    margin: 0;
+    padding: 0;
+  }
+  ul:not(.list), ul:not(.list) li {
+    list-style: none;
+  }
+  ol  {
+    margin: 0 0 0 15px;
+    padding: 0;
+  }
+  ol li  {
+    margin: 0;
+    padding: 0 0 0 10px;
+  }
+  .test-intro,
+  .test-screenshot {
+    width: 50%;
+    float: left;
+  }
+  .test-screenshot img {
+    width: 100%;
+  }
+  figure {
+    margin:0;
+  }
+  figcaption {
+    text-align: center;
+    font-style: italic;
+  }
+  .small {
+    position: relative;
+  }
+  .legend {
+    position: absolute;
+    color: #ae1c2e;
+  }
+  .small * {
+    font-size: 11px;
+  }
+  .small li,
+  .small p {
+    padding-left: 30px;
+  }
+  h1 {
+    font-size: 18px;
+    color: #000;
+  }
+  a {
+    color: #087d3c;
+  }
+  table {
+    border-collapse: collapse;
+  }
+  th,
+  td {
+    padding: 5px;
+    margin: 0;
+  }
+  
+  th, .th {
+    background: #999;
+    border: 1px solid #888;
+  }
+  th.empty {
+    border-color: #999 #888 #999 #999;
+  }
+  td {
+    border: 1px solid #ccc;
+    text-align: center;
+  }
+  td.criteria {
+    text-align: right;
+  }
+  tr.features td {
+    background-color: #eee;
+  }
+  sup a {
+    font-size: 0.9em;
+    position: relative;
+    top: 0.1em;
+    text-decoration: none;
+    color: #ae1c2e;
+  }
+  </style>
+</head>
+
+<body>
+  <div class="content">
+    <h1>Responsive Grid Systems Comparison</h1>
+    <div class="test-intro">
+      <p>The purpose of the test is to find out how semantic grid systems perform against presentational grid systems.</p>
+      <h2>Definitions</h2>
+      <p><strong>Semantic grids</strong> allow complete separation of mark-up and presentation (e.g. "sidebar" can be any column width in any viewport). With semantic grid systems, the mark-up will not be polluted with presentational classes.</p>
+      <p><strong>Presentational grids</strong> are based on presentational classes (e.g. "phone-2-12 tablet-4-12" means the div will be 2 columns out of 12 columns width in phone viewport and 4 column out of 12 column width in tablet viewport)</p>
+      <p><strong>Combination grids</strong> are grid systems that can be used in both manners.</p>
+      <p>Check this link for more information on <a href="http://tympanus.net/codrops/2013/01/22/defending-presentational-class-names/" target="_blank">presentational versus semantic classes</a>.</p>
+      <h2>Test description</h2>
+      <ul class="list">
+        <li>12 column fluid grid</li>
+        <li>two breakpoints (mobile and min-width 768px).</li>
+        <li>Various column widths and combinations</li>
+        <li>With the exception of class names, the html structure stays the same.</li>
+      </ul>
+      <p>The CSS specific to the grid was separated in its own file (css/grid.css) to measure the results of the test more accurately.</p> 
+      <p>All the tested grid systems contain only grid styles (with the exception of Skeleton which is more of a bootstrap).</p>      
+    </div>
+    <div class="test-screenshot">
+      <figure>
+        <figcaption>Test screenshot</figcaption>
+        <img src="img/test.png" alt="Test">
+      </figure>
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th class="empty">&nbsp;</th>
+          <th colspan="5">Presentational</th>
+          <th colspan="2">Semantic</th>
+          <th colspan="2">Combination</th>
+        </tr>
+        <tr>
+          <th class="empty">Criteria</th>
+          <th>CSSSmartGrid</th>
+          <th>DeadSimpleGrid</th>
+          <th>ResponsiveGridSystem</th>
+          <th>SimpleGrid</th>
+          <th>Skeleton</th>
+          <th>Neat</th>
+          <th>ProfoundGrid</th>
+          <th>CSSWizardryGrids</th>
+          <th>Griddle</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="criteria">Max Columns</td>
+          <td>12<sup><a href="#one">1</a></sup></td>
+          <td>N/A</td>
+          <td>12</td>
+          <td>12</td>
+          <td>12</td>
+          <td>12<sup><a href="#one">1</a></sup></td>
+          <td>12<sup><a href="#one">1</a></sup></td>
+          <td>12</td>
+          <td>12</td>
+        </tr>
+        <tr>
+          <td class="criteria">Library file size</td>
+          <td>25K</td>
+          <td>250 bytes</td>
+          <td>45K</td>
+          <td>4K</td>
+          <td>11K</td>
+          <td>35K</td>
+          <td>6K</td>
+          <td>20K</td>
+          <td>4KB</td>
+        </tr>
+        <tr>
+          <td class="criteria">Preprocessor<br>Dependencies</td>
+          <td>SASS,<br>Bourbon</td>
+          <td>NONE</td>
+          <td>NONE</td>
+          <td>NONE</td>
+          <td>NONE</td>
+          <td>SASS,<br>Bourbon</td>
+          <td>SASS</td>
+          <td>SASS</td>
+          <td>SASS</td>
+        </tr>
+        <tr>
+          <td class="criteria">Support</td>
+          <td>All, IE8+</td>
+          <td>All, IE9+<br>IE8 with <a href="https://github.com/scottjehl/Respond" target="_blank">Respond.js</a></td>
+          <td>All, IE8+</td>
+          <td>All, IE8+</td>
+          <td>All, IE9+</td>
+          <td>All, IE9+<br>IE8 with <a href="http://selectivizr.com/" target="_blank">selectivizr</a></td>
+          <td>All, IE8+</td>
+          <td>All, IE8+</td>
+          <td>All, IE8+</td>
+        </tr>
+        <tr>
+          <td class="criteria">Documentation<sup><a href="#five">5</a></sup></td>
+          <td>Sparse</td>
+          <td>Sparse</td>
+          <td>Rich</td>
+          <td>Sparse</td>
+          <td>Abundant</td>
+          <td>Abundant</td>
+          <td>Sparse</td>
+          <td>Rich</td>
+          <td>Unmaintained</td>
+        </tr>
+        <tr>
+          <td class="criteria">Source</td>
+          <td><a href="http://dryan.github.io/css-smart-grid/" target="_blank">Source</a></td>
+          <td><a href="https://github.com/mourner/dead-simple-grid" target="_blank">Source</a></td>
+          <td><a href="http://www.responsivegridsystem.com/" target="_blank">Source</a></td>
+          <td><a href="http://thisisdallas.github.io/Simple-Grid/" target="_blank">Source</a></td>
+          <td><a href="http://getskeleton.com/" target="_blank">Source</a></td>
+          <td><a href="https://github.com/thoughtbot/neat" target="_blank">Source</a></td>
+          <td><a href="https://github.com/artofrawr/profoundgrid/" target="_blank">Source</a></td>
+          <td><a href="https://github.com/csswizardry/csswizardry-grids" target="_blank">Source</a></td>
+          <td><a href="https://github.com/necolas/griddle" target="_blank">Source</a></td>
+        </tr>
+        <tr>
+          <td class="criteria">Official Demo</td>
+          <td><a href="presentational/css-smart-grid/demo.html" target="_blank">Demo</a></td>
+          <td><a href="presentational/dead-simple-grid/" target="_blank">Demo</a></td>
+          <td><a href="presentational/responsivegridsystem/responsivegridsystem.html" target="_blank">Demo</a></td>
+          <td><a href="presentational/ThisIsDallas-Simple-Grid-8bf0f8e/index.html" target="_blank">Demo</a></td>
+          <td><a href="presentational/Skeleton-2.0.4/" target="_blank">Demo</a></td>
+          <td><a href="http://neat.bourbon.io/examples/" target="_blank">Demo</a></td>
+          <td><a href="semantic/profoundgrid/" target="_blank">Demo</a></td>
+          <td><a href="combination/csswizardry-grids-demo/" target="_blank">Demo</a></td>
+          <td><a href="http://necolas.github.io/griddle/" target="_blank">Demo</a></td>
+        </tr>
+        <tr>
+          <td colspan="10" class="th">Customization capabilities and features out of the box</td>
+        </tr>
+        <tr class="features">
+          <td class="criteria">Gutter Types</td>
+          <td>Fluid<br>Fixed<br>None</td>
+          <td>None</td>
+          <td>Fluid 1.6%</td>
+          <td>Fixed 20px</td>
+          <td>Fluid 4%</td>
+          <td>Fluid<br>Fixed<br>None</td>
+          <td>Fluid<br>Fixed<br>None</td>
+          <td>Fixed<br>Fluid<br>None</td>
+          <td>Fixed<br>Fluid<br>None</td>
+        </tr>
+        <tr class="features">
+          <td class="criteria">Concurent Multiple<br>Gutter Types</td>
+          <td>No</td>
+          <td>No</td>
+          <td>No</td>
+          <td>No</td>
+          <td>No</td>
+          <td>Yes</td>
+          <td>No</td>
+          <td>No</td>
+          <td>No</td>
+        </tr>
+        <tr class="features">
+          <td class="criteria"># of Breakpoints</td>
+          <td>1 only</td>
+          <td>None</td>
+          <td>1 only</td>
+          <td>1 only</td>
+          <td>1 only</td>
+          <td>As needed</td>
+          <td>As needed</td>
+          <td>As needed</td>
+          <td>As needed</td>
+        </tr>
+        <tr class="features">
+          <td class="criteria">Class Names</td>
+          <td>Customizable</td>
+          <td>Customizable<sup><a href="#three">3</a></sup></td>
+          <td>Fixed</td>
+          <td>Fixed</td>
+          <td>Fixed</td>
+          <td>Customizable</td>
+          <td>Customizable</td>
+          <td>Customizable</td>
+          <td>Both</td>
+        </tr>
+        <tr class="features">
+          <td class="criteria">Offsets<br>(push/pull)</td>
+          <td>Yes</td>
+          <td>No</td>
+          <td>No</td>
+          <td>Yes</td>
+          <td>Yes</td>
+          <td>Yes</td>
+          <td>Yes</td>
+          <td>Yes</td>
+          <td>No</td>
+        </tr>
+        <tr class="features">
+          <td class="criteria">Column Number</td>
+          <td>Yes</td>
+          <td>Yes<sup><a href="#four">4</a></sup></td>
+          <td>No</td>
+          <td>No</td>
+          <td>No</td>
+          <td>Yes</td>
+          <td>Yes</td>
+          <td>No</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td class="criteria">Generated CSS file size</td>
+          <td>3k</td>
+          <td>3k</td>
+          <td>8k</td>
+          <td>4k</td>
+          <td>3k</td>
+          <td>2k</td>
+          <td>54k</td>
+          <td>Presentational: 26k<br>Semantic: 10k<sup><a href="#two">2</a></sup></td>
+          <td>Presentational: 5k<br>Semantic: 5k</td>
+        </tr>
+        <tr>
+          <td class="criteria">HTML file size</td>
+          <td>5k</td>
+          <td>5k</td>
+          <td>5k</td>
+          <td>4k</td>
+          <td>5k</td>
+          <td>5k</td>
+          <td>5k</td>
+          <td>Presentational: 6k<br>Semantic: 5k</td>
+          <td>Presentational: 7k<br>Semantic: 7k</td>
+        </tr>
+        <tr>
+          <td class="criteria">Test Page</td>
+          <td><a href="presentational/css-smart-grid/example/" target="_blank">Presentational</a></td>
+          <td><a href="presentational/dead-simple-grid/example/" target="_blank">Presentational</a></td>
+          <td><a href="presentational/responsivegridsystem/example/" target="_blank">Presentational</a></td>
+          <td><a href="presentational/ThisIsDallas-Simple-Grid-8bf0f8e/example/" target="_blank">Presentational</a></td>
+          <td><a href="presentational/Skeleton-2.0.4/example/" target="_blank">Presentational</a></td>
+          <td><a href="semantic/neat/example-semantic" target="_blank">Semantic</a></td>
+          <td><a href="semantic/profoundgrid/example-semantic" target="_blank">Semantic</a></td>
+          <td><a href="combination/csswizardry-grids/example-presentational" target="_blank">Presentational</a><br><a href="combination/csswizardry-grids/example-semantic" target="_blank">Semantic</a></td>
+          <td><a href="combination/griddle/example-presentational" target="_blank">Presentational</a><br><a href="combination/griddle/example-semantic" target="_blank">Semantic</a></td>
+        </tr>
+        <tr class="features">
+          <td class="criteria">Notes</td>
+          <td>Technically you could make a semantic grid system, but realistically no.</td>
+          <td>You might as well build your own custom grid system.</td>
+          <td>Requires a lot of work to customize the grid and the gutters.</td>
+          <td>It's one of the best grid systems that doesn't use a preprocessor.</td>
+          <td>Skeleton is a framework, so the dev has to remove non-grid styles.</td>
+          <td>It offers the most options one can think of. The learning curve might be a little steeper because there are so many features. A less experienced developer can easily misuse it.</td>
+          <td>It's too finicky and it doesn't support columns of unequal width in the same row.</td>
+          <td>You can't customize the number of columns. If you need to indend the first column, then you need to indend all the columns in hat row.</td>
+          <td>Semantic means that you can add divs of fixed widths within a grid and the rest of the divs will occupy the remaining space in a fluid fashion.</td>
+        </tr>
+      </tbody>
+    </table>
+    <div id="one" class="small">
+      <span class="legend">1</span>
+      <p>Technically unlimited number of columns, with the specified number being the default columns number provided by the library.</p>
+    </div>
+    <div id="two" class="small">
+      <span class="legend">2</span>
+      <p>There are a lot of comments which ad to the overall css file size.</p>
+    </div>
+    <div id="three" class="small">
+      <span class="legend">3</span>
+      <p>Technically you can name the classes anyway you want because the Dead Simple Grid system doesn't provide any class names except for parent "grid".</p>
+    </div>
+    <div id="four" class="small">
+      <span class="legend">4</span>
+      <p>Technically unlimited number of columns because Dead Simple Grid system doesn't provide a number of columns.</p>
+    </div>
+    <div id="five" class="small">
+      <span class="legend">5</span>
+      <ul>
+        <li><strong>Unmaintained</strong> (inexistent or outdated documentation; abandoned project),</li>
+        <li><strong>Sparse</strong> (very few sources of documentation or official documentation is meagre),</li>
+        <li><strong>Rich</strong> (everything you need in one place, usually the project's official Documentation),</li>
+        <li><strong>Abundant</strong> (many documentation sources).</li>
+      </ul>
+    </div>
+    
+    <h2>Conclusions</h2>
+    <ol>
+      <li>There is no perfect grid system. It all depends on the project and a variety of factors. See "Key questions to choose a grid system" below.</li>
+      <li>Semantic grid doesn't necessarily mean less generated CSS.</li>
+      <li>There are significantly more presentational grids than semantic.</li>
+      <li>The best grid system is Neat. A close runner up is CSSwizardry.</li>
+      <li>The best presentational grid system is CSS Smart Grid.</li>
+      <li>If the project is small and simple, it's ok to go with a presentational grid system.</li>
+      <li>All semantic grid systems have the potential to generate presentational css, whereas presentational grid systems can never be semantic.</li>
+    </ol>
+    
+    <h2>Key questions to choose a grid system</h2>
+    <ol>
+      <li>How large is the project?</li>
+      <li>Does the grid need customization?</li>
+      <li>Do you need fixed or fluid gutters?</li>
+      <li>Do you need multiple types of gutter grids or gutterless grids?</li>
+      <li>Do you need just the grids or a whole bootstrap?</li>
+      <li>What preprocessor do you use?</li>
+      <li>How seasoned are the developers with grid systems? What about preprocessors?</li>
+      <li>What browsers are you going to support?</li>
+    </ol>
+  </div>
+</body>
+</html>

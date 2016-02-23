@@ -1,0 +1,87 @@
+$gutter: 18px;
+$push: true;
+$pull: true;
+$color: #f43059;
+
+@import "csswizardry-grids";
+
+html{
+    font:0.75em/1.5 sans-serif;
+    background-color:#f9f9f9;
+    color:#444;
+}
+body{
+    max-width:1200px;
+    margin:$gutter auto;
+    padding:0 $gutter;
+}
+
+.hero{
+    text-align:center;
+    padding:3 * $gutter 0;
+
+    p{
+        font-size:1.333em;
+        margin:0;
+    }
+}
+
+h1{
+    font-size:6em;
+    @media screen and (max-width:700px){
+        font-size:3em;
+    }
+    text-align:center;
+    margin:0;
+    line-height:1;
+    text-shadow:0 -1px rgba(0, 0, 0, 0.25);
+}
+
+p{
+    margin:0;
+    margin-bottom:$gutter;
+}
+
+a{
+    color:$color;
+    font-weight:bold;
+    text-decoration:none;
+
+    &:hover{
+        text-decoration:underline;
+    }
+}
+
+.demo-block{
+    background-color:$color;
+    color:#fff;
+    padding:$gutter;
+}
+
+.page{
+    @extend .grid;
+    @extend .grid--rev;
+}
+
+    .content{
+        @extend .grid__item;
+        @extend .desk--three-fifths;
+        @extend .lap--seven-tenths;
+    }
+
+    .sub-content{
+        @extend .grid__item;
+        @extend .desk--two-fifths;
+        @extend .lap--three-tenths;
+    }
+
+.footer{
+    @extend .grid;
+    @extend .grid--full;
+}
+
+    .footer__item{
+        @extend .grid__item;
+        @extend .lap--one-half;
+        @extend .desk--one-quarter;
+    }

@@ -1,0 +1,1808 @@
+/**
+ * Profound Grid
+ * 
+ * Built in Sass (SCSS) this responsive/adaptive grid supports both fixed and fluid layouts, 
+ * relative and fixed gutters, as well as your choice of semantic markup or generic '.grid-x' classes.
+ * 
+ * The biggest difference to other grid systems is the use of negative margins for column
+ * placements, avoiding the subpixel rounding issues that usually break/uglify fluid layouts
+ * in some browsers.
+ * 
+ * Nested columns are supported too, without having to reset the grid on each level. 
+ *
+ * Credits/Inspiration:
+ * -------------------
+ * Semantic Grid: http://www.semantic.gs
+ * Susy: http://susy.oddbird.net
+ * Negative Grid: http://chrisplaneta.com/freebies/negativegrid-fluid-css-grid-by-chris-planeta/
+ *
+ * @author Profound Creative Studio
+ * @url http://www.profoundgrid.com
+ * @url http://www.weareprofound.com 
+ */
+/**
+ * Clearfix
+ */
+/**
+ * Legacy Clearfix
+ */
+/**
+ * Establish the grid-containing element.
+ */
+/**
+ * Align an element to the grid.
+ */
+/**
+ * Apply to any column to make it the last one of the current row.
+ */
+@media screen and (min-width: 768px) {
+  .content {
+    max-width: 1180px;
+    margin: 0 auto;
+    width: 100%;
+    margin: 0 0;
+    overflow: hidden;
+    *zoom: 1; }
+
+  .smallest-col {
+    float: left;
+    margin-right: -100%;
+    width: 7.42%; }
+
+  .smallest-col + .smallest-col + .smallest-col {
+    margin-left: 0%;
+    margin-bottom: 1%;
+    clear: both;
+    *zoom: 1; }
+    .smallest-col + .smallest-col + .smallest-col :after {
+      content: "\0020";
+      display: block;
+      height: 0;
+      clear: both;
+      overflow: hidden;
+      visibility: hidden; }
+
+  .smallest-col + .smallest-col {
+    margin-left: 8.42%;
+    margin-bottom: 1%;
+    clear: none; }
+
+  .smallest-col + .smallest-col + .smallest-col {
+    margin-left: 16.83%;
+    margin-bottom: 1%;
+    clear: none; }
+
+  .smallest-col + .smallest-col + .smallest-col + .smallest-col {
+    margin-left: 25.25%;
+    margin-bottom: 1%;
+    clear: none; }
+
+  .smallest-col + .smallest-col + .smallest-col + .smallest-col + .smallest-col {
+    margin-left: 33.67%;
+    margin-bottom: 1%;
+    clear: none; }
+
+  .smallest-col + .smallest-col + .smallest-col + .smallest-col + .smallest-col + .smallest-col {
+    margin-left: 42.08%;
+    margin-bottom: 1%;
+    clear: none; }
+
+  .smallest-col + .smallest-col + .smallest-col + .smallest-col + .smallest-col + .smallest-col + .smallest-col {
+    margin-left: 50.5%;
+    margin-bottom: 1%;
+    clear: none; }
+
+  .smallest-col + .smallest-col + .smallest-col + .smallest-col + .smallest-col + .smallest-col + .smallest-col + .smallest-col {
+    margin-left: 58.92%;
+    margin-bottom: 1%;
+    clear: none; }
+
+  .smallest-col + .smallest-col + .smallest-col + .smallest-col + .smallest-col + .smallest-col + .smallest-col + .smallest-col + .smallest-col {
+    margin-left: 67.33%;
+    margin-bottom: 1%;
+    clear: none; }
+
+  .smallest-col + .smallest-col + .smallest-col + .smallest-col + .smallest-col + .smallest-col + .smallest-col + .smallest-col + .smallest-col + .smallest-col {
+    margin-left: 75.75%;
+    margin-bottom: 1%;
+    clear: none; }
+
+  .smallest-col + .smallest-col + .smallest-col + .smallest-col + .smallest-col + .smallest-col + .smallest-col + .smallest-col + .smallest-col + .smallest-col + .smallest-col {
+    margin-left: 84.17%;
+    margin-bottom: 1%;
+    clear: none; }
+
+  .smallest-col + .smallest-col + .smallest-col + .smallest-col + .smallest-col + .smallest-col + .smallest-col + .smallest-col + .smallest-col + .smallest-col + .smallest-col + .smallest-col {
+    margin-left: 92.58%;
+    margin-bottom: 1%;
+    clear: none; }
+
+  .small-ad,
+  .small-ad-indended {
+    float: left;
+    margin-right: -100%;
+    width: 15.83%; }
+
+  .small-ad-indended {
+    margin-left: 8.42%; }
+
+  .small-ad + .small-ad + .small-ad {
+    margin-left: 0%;
+    margin-bottom: 1%;
+    clear: both;
+    *zoom: 1; }
+    .small-ad + .small-ad + .small-ad :after {
+      content: "\0020";
+      display: block;
+      height: 0;
+      clear: both;
+      overflow: hidden;
+      visibility: hidden; }
+
+  .small-ad + .small-ad {
+    margin-left: 16.83%;
+    margin-bottom: 1%;
+    clear: none; }
+
+  .small-ad + .small-ad + .small-ad {
+    margin-left: 33.67%;
+    margin-bottom: 1%;
+    clear: none; }
+
+  .small-ad + .small-ad + .small-ad + .small-ad {
+    margin-left: 50.5%;
+    margin-bottom: 1%;
+    clear: none; }
+
+  .small-ad + .small-ad + .small-ad + .small-ad + .small-ad {
+    margin-left: 67.33%;
+    margin-bottom: 1%;
+    clear: none; }
+
+  .small-ad + .small-ad + .small-ad + .small-ad + .small-ad + .small-ad {
+    margin-left: 84.17%;
+    margin-bottom: 1%;
+    clear: none; }
+
+  .small-ad + .small-ad + .small-ad + .small-ad + .small-ad + .small-ad + .small-ad {
+    margin-left: 0%;
+    margin-bottom: 1%;
+    clear: both;
+    *zoom: 1; }
+    .small-ad + .small-ad + .small-ad + .small-ad + .small-ad + .small-ad + .small-ad :after {
+      content: "\0020";
+      display: block;
+      height: 0;
+      clear: both;
+      overflow: hidden;
+      visibility: hidden; }
+
+  .small-ad + .small-ad + .small-ad + .small-ad + .small-ad + .small-ad + .small-ad + .small-ad {
+    margin-left: 16.83%;
+    margin-bottom: 1%;
+    clear: none; }
+
+  .small-ad + .small-ad + .small-ad + .small-ad + .small-ad + .small-ad + .small-ad + .small-ad + .small-ad {
+    margin-left: 33.67%;
+    margin-bottom: 1%;
+    clear: none; }
+
+  .small-ad + .small-ad + .small-ad + .small-ad + .small-ad + .small-ad + .small-ad + .small-ad + .small-ad + .small-ad {
+    margin-left: 50.5%;
+    margin-bottom: 1%;
+    clear: none; }
+
+  .small-ad + .small-ad + .small-ad + .small-ad + .small-ad + .small-ad + .small-ad + .small-ad + .small-ad + .small-ad + .small-ad {
+    margin-left: 67.33%;
+    margin-bottom: 1%;
+    clear: none; }
+
+  .small-ad + .small-ad + .small-ad + .small-ad + .small-ad + .small-ad + .small-ad + .small-ad + .small-ad + .small-ad + .small-ad + .small-ad {
+    margin-left: 84.17%;
+    margin-bottom: 1%;
+    clear: none; }
+
+  .medium-ad {
+    float: left;
+    margin-right: -100%;
+    width: 24.25%; }
+
+  .medium-ad + .medium-ad + .medium-ad {
+    margin-left: 0%;
+    margin-bottom: 1%;
+    clear: both;
+    *zoom: 1; }
+    .medium-ad + .medium-ad + .medium-ad :after {
+      content: "\0020";
+      display: block;
+      height: 0;
+      clear: both;
+      overflow: hidden;
+      visibility: hidden; }
+
+  .medium-ad + .medium-ad {
+    margin-left: 25.25%;
+    margin-bottom: 1%;
+    clear: none; }
+
+  .medium-ad + .medium-ad + .medium-ad {
+    margin-left: 50.5%;
+    margin-bottom: 1%;
+    clear: none; }
+
+  .medium-ad + .medium-ad + .medium-ad + .medium-ad {
+    margin-left: 75.75%;
+    margin-bottom: 1%;
+    clear: none; }
+
+  .medium-ad + .medium-ad + .medium-ad + .medium-ad + .medium-ad {
+    margin-left: 0%;
+    margin-bottom: 1%;
+    clear: both;
+    *zoom: 1; }
+    .medium-ad + .medium-ad + .medium-ad + .medium-ad + .medium-ad :after {
+      content: "\0020";
+      display: block;
+      height: 0;
+      clear: both;
+      overflow: hidden;
+      visibility: hidden; }
+
+  .medium-ad + .medium-ad + .medium-ad + .medium-ad + .medium-ad + .medium-ad {
+    margin-left: 25.25%;
+    margin-bottom: 1%;
+    clear: none; }
+
+  .medium-ad + .medium-ad + .medium-ad + .medium-ad + .medium-ad + .medium-ad + .medium-ad {
+    margin-left: 50.5%;
+    margin-bottom: 1%;
+    clear: none; }
+
+  .medium-ad + .medium-ad + .medium-ad + .medium-ad + .medium-ad + .medium-ad + .medium-ad + .medium-ad {
+    margin-left: 75.75%;
+    margin-bottom: 1%;
+    clear: none; }
+
+  .medium-ad + .medium-ad + .medium-ad + .medium-ad + .medium-ad + .medium-ad + .medium-ad + .medium-ad + .medium-ad {
+    margin-left: 0%;
+    margin-bottom: 1%;
+    clear: both;
+    *zoom: 1; }
+    .medium-ad + .medium-ad + .medium-ad + .medium-ad + .medium-ad + .medium-ad + .medium-ad + .medium-ad + .medium-ad :after {
+      content: "\0020";
+      display: block;
+      height: 0;
+      clear: both;
+      overflow: hidden;
+      visibility: hidden; }
+
+  .medium-ad + .medium-ad + .medium-ad + .medium-ad + .medium-ad + .medium-ad + .medium-ad + .medium-ad + .medium-ad + .medium-ad {
+    margin-left: 25.25%;
+    margin-bottom: 1%;
+    clear: none; }
+
+  .medium-ad + .medium-ad + .medium-ad + .medium-ad + .medium-ad + .medium-ad + .medium-ad + .medium-ad + .medium-ad + .medium-ad + .medium-ad {
+    margin-left: 50.5%;
+    margin-bottom: 1%;
+    clear: none; }
+
+  .medium-ad + .medium-ad + .medium-ad + .medium-ad + .medium-ad + .medium-ad + .medium-ad + .medium-ad + .medium-ad + .medium-ad + .medium-ad + .medium-ad {
+    margin-left: 75.75%;
+    margin-bottom: 1%;
+    clear: none; }
+
+  .quarter-ad {
+    float: left;
+    margin-right: -100%;
+    width: 49.5%; }
+
+  .quarter-ad + .quarter-ad + .quarter-ad {
+    margin-left: 0%;
+    margin-bottom: 1%;
+    clear: both;
+    *zoom: 1; }
+    .quarter-ad + .quarter-ad + .quarter-ad :after {
+      content: "\0020";
+      display: block;
+      height: 0;
+      clear: both;
+      overflow: hidden;
+      visibility: hidden; }
+
+  .quarter-ad + .quarter-ad {
+    margin-left: 50.5%;
+    margin-bottom: 1%;
+    clear: none; }
+
+  .quarter-ad + .quarter-ad + .quarter-ad {
+    margin-left: 0%;
+    margin-bottom: 1%;
+    clear: both;
+    *zoom: 1; }
+    .quarter-ad + .quarter-ad + .quarter-ad :after {
+      content: "\0020";
+      display: block;
+      height: 0;
+      clear: both;
+      overflow: hidden;
+      visibility: hidden; }
+
+  .quarter-ad + .quarter-ad + .quarter-ad + .quarter-ad {
+    margin-left: 50.5%;
+    margin-bottom: 1%;
+    clear: none; }
+
+  .quarter-ad + .quarter-ad + .quarter-ad + .quarter-ad + .quarter-ad {
+    margin-left: 0%;
+    margin-bottom: 1%;
+    clear: both;
+    *zoom: 1; }
+    .quarter-ad + .quarter-ad + .quarter-ad + .quarter-ad + .quarter-ad :after {
+      content: "\0020";
+      display: block;
+      height: 0;
+      clear: both;
+      overflow: hidden;
+      visibility: hidden; }
+
+  .quarter-ad + .quarter-ad + .quarter-ad + .quarter-ad + .quarter-ad + .quarter-ad {
+    margin-left: 50.5%;
+    margin-bottom: 1%;
+    clear: none; }
+
+  .quarter-ad + .quarter-ad + .quarter-ad + .quarter-ad + .quarter-ad + .quarter-ad + .quarter-ad {
+    margin-left: 0%;
+    margin-bottom: 1%;
+    clear: both;
+    *zoom: 1; }
+    .quarter-ad + .quarter-ad + .quarter-ad + .quarter-ad + .quarter-ad + .quarter-ad + .quarter-ad :after {
+      content: "\0020";
+      display: block;
+      height: 0;
+      clear: both;
+      overflow: hidden;
+      visibility: hidden; }
+
+  .quarter-ad + .quarter-ad + .quarter-ad + .quarter-ad + .quarter-ad + .quarter-ad + .quarter-ad + .quarter-ad {
+    margin-left: 50.5%;
+    margin-bottom: 1%;
+    clear: none; }
+
+  .quarter-ad + .quarter-ad + .quarter-ad + .quarter-ad + .quarter-ad + .quarter-ad + .quarter-ad + .quarter-ad + .quarter-ad {
+    margin-left: 0%;
+    margin-bottom: 1%;
+    clear: both;
+    *zoom: 1; }
+    .quarter-ad + .quarter-ad + .quarter-ad + .quarter-ad + .quarter-ad + .quarter-ad + .quarter-ad + .quarter-ad + .quarter-ad :after {
+      content: "\0020";
+      display: block;
+      height: 0;
+      clear: both;
+      overflow: hidden;
+      visibility: hidden; }
+
+  .quarter-ad + .quarter-ad + .quarter-ad + .quarter-ad + .quarter-ad + .quarter-ad + .quarter-ad + .quarter-ad + .quarter-ad + .quarter-ad {
+    margin-left: 50.5%;
+    margin-bottom: 1%;
+    clear: none; }
+
+  .quarter-ad + .quarter-ad + .quarter-ad + .quarter-ad + .quarter-ad + .quarter-ad + .quarter-ad + .quarter-ad + .quarter-ad + .quarter-ad + .quarter-ad {
+    margin-left: 0%;
+    margin-bottom: 1%;
+    clear: both;
+    *zoom: 1; }
+    .quarter-ad + .quarter-ad + .quarter-ad + .quarter-ad + .quarter-ad + .quarter-ad + .quarter-ad + .quarter-ad + .quarter-ad + .quarter-ad + .quarter-ad :after {
+      content: "\0020";
+      display: block;
+      height: 0;
+      clear: both;
+      overflow: hidden;
+      visibility: hidden; }
+
+  .quarter-ad + .quarter-ad + .quarter-ad + .quarter-ad + .quarter-ad + .quarter-ad + .quarter-ad + .quarter-ad + .quarter-ad + .quarter-ad + .quarter-ad + .quarter-ad {
+    margin-left: 50.5%;
+    margin-bottom: 1%;
+    clear: none; }
+
+  .article {
+    float: left;
+    margin-right: -100%;
+    width: 49.5%; }
+
+  .article + .article + .article {
+    margin-left: 0%;
+    margin-bottom: 1%;
+    clear: both;
+    *zoom: 1; }
+    .article + .article + .article :after {
+      content: "\0020";
+      display: block;
+      height: 0;
+      clear: both;
+      overflow: hidden;
+      visibility: hidden; }
+
+  .article + .article {
+    margin-left: 50.5%;
+    margin-bottom: 1%;
+    clear: none; }
+
+  .article + .article + .article {
+    margin-left: 0%;
+    margin-bottom: 1%;
+    clear: both;
+    *zoom: 1; }
+    .article + .article + .article :after {
+      content: "\0020";
+      display: block;
+      height: 0;
+      clear: both;
+      overflow: hidden;
+      visibility: hidden; }
+
+  .article + .article + .article + .article {
+    margin-left: 50.5%;
+    margin-bottom: 1%;
+    clear: none; }
+
+  .article + .article + .article + .article + .article {
+    margin-left: 0%;
+    margin-bottom: 1%;
+    clear: both;
+    *zoom: 1; }
+    .article + .article + .article + .article + .article :after {
+      content: "\0020";
+      display: block;
+      height: 0;
+      clear: both;
+      overflow: hidden;
+      visibility: hidden; }
+
+  .article + .article + .article + .article + .article + .article {
+    margin-left: 50.5%;
+    margin-bottom: 1%;
+    clear: none; }
+
+  .article + .article + .article + .article + .article + .article + .article {
+    margin-left: 0%;
+    margin-bottom: 1%;
+    clear: both;
+    *zoom: 1; }
+    .article + .article + .article + .article + .article + .article + .article :after {
+      content: "\0020";
+      display: block;
+      height: 0;
+      clear: both;
+      overflow: hidden;
+      visibility: hidden; }
+
+  .article + .article + .article + .article + .article + .article + .article + .article {
+    margin-left: 50.5%;
+    margin-bottom: 1%;
+    clear: none; }
+
+  .article + .article + .article + .article + .article + .article + .article + .article + .article {
+    margin-left: 0%;
+    margin-bottom: 1%;
+    clear: both;
+    *zoom: 1; }
+    .article + .article + .article + .article + .article + .article + .article + .article + .article :after {
+      content: "\0020";
+      display: block;
+      height: 0;
+      clear: both;
+      overflow: hidden;
+      visibility: hidden; }
+
+  .article + .article + .article + .article + .article + .article + .article + .article + .article + .article {
+    margin-left: 50.5%;
+    margin-bottom: 1%;
+    clear: none; }
+
+  .article + .article + .article + .article + .article + .article + .article + .article + .article + .article + .article {
+    margin-left: 0%;
+    margin-bottom: 1%;
+    clear: both;
+    *zoom: 1; }
+    .article + .article + .article + .article + .article + .article + .article + .article + .article + .article + .article :after {
+      content: "\0020";
+      display: block;
+      height: 0;
+      clear: both;
+      overflow: hidden;
+      visibility: hidden; }
+
+  .article + .article + .article + .article + .article + .article + .article + .article + .article + .article + .article + .article {
+    margin-left: 50.5%;
+    margin-bottom: 1%;
+    clear: none; }
+
+  .large-ad {
+    float: left;
+    margin-right: -100%;
+    width: 32.67%; }
+
+  .large-ad + .large-ad + .large-ad {
+    margin-left: 0%;
+    margin-bottom: 1%;
+    clear: both;
+    *zoom: 1; }
+    .large-ad + .large-ad + .large-ad :after {
+      content: "\0020";
+      display: block;
+      height: 0;
+      clear: both;
+      overflow: hidden;
+      visibility: hidden; }
+
+  .large-ad + .large-ad {
+    margin-left: 33.67%;
+    margin-bottom: 1%;
+    clear: none; }
+
+  .large-ad + .large-ad + .large-ad {
+    margin-left: 67.33%;
+    margin-bottom: 1%;
+    clear: none; }
+
+  .large-ad + .large-ad + .large-ad + .large-ad {
+    margin-left: 0%;
+    margin-bottom: 1%;
+    clear: both;
+    *zoom: 1; }
+    .large-ad + .large-ad + .large-ad + .large-ad :after {
+      content: "\0020";
+      display: block;
+      height: 0;
+      clear: both;
+      overflow: hidden;
+      visibility: hidden; }
+
+  .large-ad + .large-ad + .large-ad + .large-ad + .large-ad {
+    margin-left: 33.67%;
+    margin-bottom: 1%;
+    clear: none; }
+
+  .large-ad + .large-ad + .large-ad + .large-ad + .large-ad + .large-ad {
+    margin-left: 67.33%;
+    margin-bottom: 1%;
+    clear: none; }
+
+  .large-ad + .large-ad + .large-ad + .large-ad + .large-ad + .large-ad + .large-ad {
+    margin-left: 0%;
+    margin-bottom: 1%;
+    clear: both;
+    *zoom: 1; }
+    .large-ad + .large-ad + .large-ad + .large-ad + .large-ad + .large-ad + .large-ad :after {
+      content: "\0020";
+      display: block;
+      height: 0;
+      clear: both;
+      overflow: hidden;
+      visibility: hidden; }
+
+  .large-ad + .large-ad + .large-ad + .large-ad + .large-ad + .large-ad + .large-ad + .large-ad {
+    margin-left: 33.67%;
+    margin-bottom: 1%;
+    clear: none; }
+
+  .large-ad + .large-ad + .large-ad + .large-ad + .large-ad + .large-ad + .large-ad + .large-ad + .large-ad {
+    margin-left: 67.33%;
+    margin-bottom: 1%;
+    clear: none; }
+
+  .large-ad + .large-ad + .large-ad + .large-ad + .large-ad + .large-ad + .large-ad + .large-ad + .large-ad + .large-ad {
+    margin-left: 0%;
+    margin-bottom: 1%;
+    clear: both;
+    *zoom: 1; }
+    .large-ad + .large-ad + .large-ad + .large-ad + .large-ad + .large-ad + .large-ad + .large-ad + .large-ad + .large-ad :after {
+      content: "\0020";
+      display: block;
+      height: 0;
+      clear: both;
+      overflow: hidden;
+      visibility: hidden; }
+
+  .large-ad + .large-ad + .large-ad + .large-ad + .large-ad + .large-ad + .large-ad + .large-ad + .large-ad + .large-ad + .large-ad {
+    margin-left: 33.67%;
+    margin-bottom: 1%;
+    clear: none; }
+
+  .large-ad + .large-ad + .large-ad + .large-ad + .large-ad + .large-ad + .large-ad + .large-ad + .large-ad + .large-ad + .large-ad + .large-ad {
+    margin-left: 67.33%;
+    margin-bottom: 1%;
+    clear: none; }
+
+  .section,
+  .section-indended {
+    float: left;
+    margin-right: -100%;
+    width: 66.33%; }
+
+  .section-indended {
+    margin-left: 8.42%; }
+
+  .section + .section + .section {
+    margin-left: 0%;
+    margin-bottom: 1%;
+    clear: both;
+    *zoom: 1; }
+    .section + .section + .section :after {
+      content: "\0020";
+      display: block;
+      height: 0;
+      clear: both;
+      overflow: hidden;
+      visibility: hidden; }
+
+  .section + .section {
+    margin-left: 0%;
+    margin-bottom: 1%;
+    clear: both;
+    *zoom: 1; }
+    .section + .section :after {
+      content: "\0020";
+      display: block;
+      height: 0;
+      clear: both;
+      overflow: hidden;
+      visibility: hidden; }
+
+  .section + .section + .section {
+    margin-left: 0%;
+    margin-bottom: 1%;
+    clear: both;
+    *zoom: 1; }
+    .section + .section + .section :after {
+      content: "\0020";
+      display: block;
+      height: 0;
+      clear: both;
+      overflow: hidden;
+      visibility: hidden; }
+
+  .section + .section + .section + .section {
+    margin-left: 0%;
+    margin-bottom: 1%;
+    clear: both;
+    *zoom: 1; }
+    .section + .section + .section + .section :after {
+      content: "\0020";
+      display: block;
+      height: 0;
+      clear: both;
+      overflow: hidden;
+      visibility: hidden; }
+
+  .section + .section + .section + .section + .section {
+    margin-left: 0%;
+    margin-bottom: 1%;
+    clear: both;
+    *zoom: 1; }
+    .section + .section + .section + .section + .section :after {
+      content: "\0020";
+      display: block;
+      height: 0;
+      clear: both;
+      overflow: hidden;
+      visibility: hidden; }
+
+  .section + .section + .section + .section + .section + .section {
+    margin-left: 0%;
+    margin-bottom: 1%;
+    clear: both;
+    *zoom: 1; }
+    .section + .section + .section + .section + .section + .section :after {
+      content: "\0020";
+      display: block;
+      height: 0;
+      clear: both;
+      overflow: hidden;
+      visibility: hidden; }
+
+  .section + .section + .section + .section + .section + .section + .section {
+    margin-left: 0%;
+    margin-bottom: 1%;
+    clear: both;
+    *zoom: 1; }
+    .section + .section + .section + .section + .section + .section + .section :after {
+      content: "\0020";
+      display: block;
+      height: 0;
+      clear: both;
+      overflow: hidden;
+      visibility: hidden; }
+
+  .section + .section + .section + .section + .section + .section + .section + .section {
+    margin-left: 0%;
+    margin-bottom: 1%;
+    clear: both;
+    *zoom: 1; }
+    .section + .section + .section + .section + .section + .section + .section + .section :after {
+      content: "\0020";
+      display: block;
+      height: 0;
+      clear: both;
+      overflow: hidden;
+      visibility: hidden; }
+
+  .section + .section + .section + .section + .section + .section + .section + .section + .section {
+    margin-left: 0%;
+    margin-bottom: 1%;
+    clear: both;
+    *zoom: 1; }
+    .section + .section + .section + .section + .section + .section + .section + .section + .section :after {
+      content: "\0020";
+      display: block;
+      height: 0;
+      clear: both;
+      overflow: hidden;
+      visibility: hidden; }
+
+  .section + .section + .section + .section + .section + .section + .section + .section + .section + .section {
+    margin-left: 0%;
+    margin-bottom: 1%;
+    clear: both;
+    *zoom: 1; }
+    .section + .section + .section + .section + .section + .section + .section + .section + .section + .section :after {
+      content: "\0020";
+      display: block;
+      height: 0;
+      clear: both;
+      overflow: hidden;
+      visibility: hidden; }
+
+  .section + .section + .section + .section + .section + .section + .section + .section + .section + .section + .section {
+    margin-left: 0%;
+    margin-bottom: 1%;
+    clear: both;
+    *zoom: 1; }
+    .section + .section + .section + .section + .section + .section + .section + .section + .section + .section + .section :after {
+      content: "\0020";
+      display: block;
+      height: 0;
+      clear: both;
+      overflow: hidden;
+      visibility: hidden; }
+
+  .section + .section + .section + .section + .section + .section + .section + .section + .section + .section + .section + .section {
+    margin-left: 0%;
+    margin-bottom: 1%;
+    clear: both;
+    *zoom: 1; }
+    .section + .section + .section + .section + .section + .section + .section + .section + .section + .section + .section + .section :after {
+      content: "\0020";
+      display: block;
+      height: 0;
+      clear: both;
+      overflow: hidden;
+      visibility: hidden; }
+
+  .section-indended + .section-indended + .section-indended {
+    margin-left: 0%;
+    margin-bottom: 1%;
+    clear: both;
+    *zoom: 1; }
+    .section-indended + .section-indended + .section-indended :after {
+      content: "\0020";
+      display: block;
+      height: 0;
+      clear: both;
+      overflow: hidden;
+      visibility: hidden; }
+
+  .section-indended + .section-indended {
+    margin-left: 0%;
+    margin-bottom: 1%;
+    clear: both;
+    *zoom: 1; }
+    .section-indended + .section-indended :after {
+      content: "\0020";
+      display: block;
+      height: 0;
+      clear: both;
+      overflow: hidden;
+      visibility: hidden; }
+
+  .section-indended + .section-indended + .section-indended {
+    margin-left: 0%;
+    margin-bottom: 1%;
+    clear: both;
+    *zoom: 1; }
+    .section-indended + .section-indended + .section-indended :after {
+      content: "\0020";
+      display: block;
+      height: 0;
+      clear: both;
+      overflow: hidden;
+      visibility: hidden; }
+
+  .section-indended + .section-indended + .section-indended + .section-indended {
+    margin-left: 0%;
+    margin-bottom: 1%;
+    clear: both;
+    *zoom: 1; }
+    .section-indended + .section-indended + .section-indended + .section-indended :after {
+      content: "\0020";
+      display: block;
+      height: 0;
+      clear: both;
+      overflow: hidden;
+      visibility: hidden; }
+
+  .section-indended + .section-indended + .section-indended + .section-indended + .section-indended {
+    margin-left: 0%;
+    margin-bottom: 1%;
+    clear: both;
+    *zoom: 1; }
+    .section-indended + .section-indended + .section-indended + .section-indended + .section-indended :after {
+      content: "\0020";
+      display: block;
+      height: 0;
+      clear: both;
+      overflow: hidden;
+      visibility: hidden; }
+
+  .section-indended + .section-indended + .section-indended + .section-indended + .section-indended + .section-indended {
+    margin-left: 0%;
+    margin-bottom: 1%;
+    clear: both;
+    *zoom: 1; }
+    .section-indended + .section-indended + .section-indended + .section-indended + .section-indended + .section-indended :after {
+      content: "\0020";
+      display: block;
+      height: 0;
+      clear: both;
+      overflow: hidden;
+      visibility: hidden; }
+
+  .section-indended + .section-indended + .section-indended + .section-indended + .section-indended + .section-indended + .section-indended {
+    margin-left: 0%;
+    margin-bottom: 1%;
+    clear: both;
+    *zoom: 1; }
+    .section-indended + .section-indended + .section-indended + .section-indended + .section-indended + .section-indended + .section-indended :after {
+      content: "\0020";
+      display: block;
+      height: 0;
+      clear: both;
+      overflow: hidden;
+      visibility: hidden; }
+
+  .section-indended + .section-indended + .section-indended + .section-indended + .section-indended + .section-indended + .section-indended + .section-indended {
+    margin-left: 0%;
+    margin-bottom: 1%;
+    clear: both;
+    *zoom: 1; }
+    .section-indended + .section-indended + .section-indended + .section-indended + .section-indended + .section-indended + .section-indended + .section-indended :after {
+      content: "\0020";
+      display: block;
+      height: 0;
+      clear: both;
+      overflow: hidden;
+      visibility: hidden; }
+
+  .section-indended + .section-indended + .section-indended + .section-indended + .section-indended + .section-indended + .section-indended + .section-indended + .section-indended {
+    margin-left: 0%;
+    margin-bottom: 1%;
+    clear: both;
+    *zoom: 1; }
+    .section-indended + .section-indended + .section-indended + .section-indended + .section-indended + .section-indended + .section-indended + .section-indended + .section-indended :after {
+      content: "\0020";
+      display: block;
+      height: 0;
+      clear: both;
+      overflow: hidden;
+      visibility: hidden; }
+
+  .section-indended + .section-indended + .section-indended + .section-indended + .section-indended + .section-indended + .section-indended + .section-indended + .section-indended + .section-indended {
+    margin-left: 0%;
+    margin-bottom: 1%;
+    clear: both;
+    *zoom: 1; }
+    .section-indended + .section-indended + .section-indended + .section-indended + .section-indended + .section-indended + .section-indended + .section-indended + .section-indended + .section-indended :after {
+      content: "\0020";
+      display: block;
+      height: 0;
+      clear: both;
+      overflow: hidden;
+      visibility: hidden; }
+
+  .section-indended + .section-indended + .section-indended + .section-indended + .section-indended + .section-indended + .section-indended + .section-indended + .section-indended + .section-indended + .section-indended {
+    margin-left: 0%;
+    margin-bottom: 1%;
+    clear: both;
+    *zoom: 1; }
+    .section-indended + .section-indended + .section-indended + .section-indended + .section-indended + .section-indended + .section-indended + .section-indended + .section-indended + .section-indended + .section-indended :after {
+      content: "\0020";
+      display: block;
+      height: 0;
+      clear: both;
+      overflow: hidden;
+      visibility: hidden; }
+
+  .section-indended + .section-indended + .section-indended + .section-indended + .section-indended + .section-indended + .section-indended + .section-indended + .section-indended + .section-indended + .section-indended + .section-indended {
+    margin-left: 0%;
+    margin-bottom: 1%;
+    clear: both;
+    *zoom: 1; }
+    .section-indended + .section-indended + .section-indended + .section-indended + .section-indended + .section-indended + .section-indended + .section-indended + .section-indended + .section-indended + .section-indended + .section-indended :after {
+      content: "\0020";
+      display: block;
+      height: 0;
+      clear: both;
+      overflow: hidden;
+      visibility: hidden; }
+
+  .details {
+    float: left;
+    margin-right: -100%;
+    width: 41.08%; }
+
+  .details + .details + .details {
+    margin-left: 0%;
+    margin-bottom: 1%;
+    clear: both;
+    *zoom: 1; }
+    .details + .details + .details :after {
+      content: "\0020";
+      display: block;
+      height: 0;
+      clear: both;
+      overflow: hidden;
+      visibility: hidden; }
+
+  .details + .details {
+    margin-left: 42.08%;
+    margin-bottom: 1%;
+    clear: none; }
+
+  .details + .details + .details {
+    margin-left: 0%;
+    margin-bottom: 1%;
+    clear: both;
+    *zoom: 1; }
+    .details + .details + .details :after {
+      content: "\0020";
+      display: block;
+      height: 0;
+      clear: both;
+      overflow: hidden;
+      visibility: hidden; }
+
+  .details + .details + .details + .details {
+    margin-left: 42.08%;
+    margin-bottom: 1%;
+    clear: none; }
+
+  .details + .details + .details + .details + .details {
+    margin-left: 0%;
+    margin-bottom: 1%;
+    clear: both;
+    *zoom: 1; }
+    .details + .details + .details + .details + .details :after {
+      content: "\0020";
+      display: block;
+      height: 0;
+      clear: both;
+      overflow: hidden;
+      visibility: hidden; }
+
+  .details + .details + .details + .details + .details + .details {
+    margin-left: 42.08%;
+    margin-bottom: 1%;
+    clear: none; }
+
+  .details + .details + .details + .details + .details + .details + .details {
+    margin-left: 0%;
+    margin-bottom: 1%;
+    clear: both;
+    *zoom: 1; }
+    .details + .details + .details + .details + .details + .details + .details :after {
+      content: "\0020";
+      display: block;
+      height: 0;
+      clear: both;
+      overflow: hidden;
+      visibility: hidden; }
+
+  .details + .details + .details + .details + .details + .details + .details + .details {
+    margin-left: 42.08%;
+    margin-bottom: 1%;
+    clear: none; }
+
+  .details + .details + .details + .details + .details + .details + .details + .details + .details {
+    margin-left: 0%;
+    margin-bottom: 1%;
+    clear: both;
+    *zoom: 1; }
+    .details + .details + .details + .details + .details + .details + .details + .details + .details :after {
+      content: "\0020";
+      display: block;
+      height: 0;
+      clear: both;
+      overflow: hidden;
+      visibility: hidden; }
+
+  .details + .details + .details + .details + .details + .details + .details + .details + .details + .details {
+    margin-left: 42.08%;
+    margin-bottom: 1%;
+    clear: none; }
+
+  .details + .details + .details + .details + .details + .details + .details + .details + .details + .details + .details {
+    margin-left: 0%;
+    margin-bottom: 1%;
+    clear: both;
+    *zoom: 1; }
+    .details + .details + .details + .details + .details + .details + .details + .details + .details + .details + .details :after {
+      content: "\0020";
+      display: block;
+      height: 0;
+      clear: both;
+      overflow: hidden;
+      visibility: hidden; }
+
+  .details + .details + .details + .details + .details + .details + .details + .details + .details + .details + .details + .details {
+    margin-left: 42.08%;
+    margin-bottom: 1%;
+    clear: none; }
+
+  .about-us {
+    float: left;
+    margin-right: -100%;
+    width: 57.92%; }
+
+  .about-us + .about-us + .about-us {
+    margin-left: 0%;
+    margin-bottom: 1%;
+    clear: both;
+    *zoom: 1; }
+    .about-us + .about-us + .about-us :after {
+      content: "\0020";
+      display: block;
+      height: 0;
+      clear: both;
+      overflow: hidden;
+      visibility: hidden; }
+
+  .about-us + .about-us {
+    margin-left: 0%;
+    margin-bottom: 1%;
+    clear: both;
+    *zoom: 1; }
+    .about-us + .about-us :after {
+      content: "\0020";
+      display: block;
+      height: 0;
+      clear: both;
+      overflow: hidden;
+      visibility: hidden; }
+
+  .about-us + .about-us + .about-us {
+    margin-left: 0%;
+    margin-bottom: 1%;
+    clear: both;
+    *zoom: 1; }
+    .about-us + .about-us + .about-us :after {
+      content: "\0020";
+      display: block;
+      height: 0;
+      clear: both;
+      overflow: hidden;
+      visibility: hidden; }
+
+  .about-us + .about-us + .about-us + .about-us {
+    margin-left: 0%;
+    margin-bottom: 1%;
+    clear: both;
+    *zoom: 1; }
+    .about-us + .about-us + .about-us + .about-us :after {
+      content: "\0020";
+      display: block;
+      height: 0;
+      clear: both;
+      overflow: hidden;
+      visibility: hidden; }
+
+  .about-us + .about-us + .about-us + .about-us + .about-us {
+    margin-left: 0%;
+    margin-bottom: 1%;
+    clear: both;
+    *zoom: 1; }
+    .about-us + .about-us + .about-us + .about-us + .about-us :after {
+      content: "\0020";
+      display: block;
+      height: 0;
+      clear: both;
+      overflow: hidden;
+      visibility: hidden; }
+
+  .about-us + .about-us + .about-us + .about-us + .about-us + .about-us {
+    margin-left: 0%;
+    margin-bottom: 1%;
+    clear: both;
+    *zoom: 1; }
+    .about-us + .about-us + .about-us + .about-us + .about-us + .about-us :after {
+      content: "\0020";
+      display: block;
+      height: 0;
+      clear: both;
+      overflow: hidden;
+      visibility: hidden; }
+
+  .about-us + .about-us + .about-us + .about-us + .about-us + .about-us + .about-us {
+    margin-left: 0%;
+    margin-bottom: 1%;
+    clear: both;
+    *zoom: 1; }
+    .about-us + .about-us + .about-us + .about-us + .about-us + .about-us + .about-us :after {
+      content: "\0020";
+      display: block;
+      height: 0;
+      clear: both;
+      overflow: hidden;
+      visibility: hidden; }
+
+  .about-us + .about-us + .about-us + .about-us + .about-us + .about-us + .about-us + .about-us {
+    margin-left: 0%;
+    margin-bottom: 1%;
+    clear: both;
+    *zoom: 1; }
+    .about-us + .about-us + .about-us + .about-us + .about-us + .about-us + .about-us + .about-us :after {
+      content: "\0020";
+      display: block;
+      height: 0;
+      clear: both;
+      overflow: hidden;
+      visibility: hidden; }
+
+  .about-us + .about-us + .about-us + .about-us + .about-us + .about-us + .about-us + .about-us + .about-us {
+    margin-left: 0%;
+    margin-bottom: 1%;
+    clear: both;
+    *zoom: 1; }
+    .about-us + .about-us + .about-us + .about-us + .about-us + .about-us + .about-us + .about-us + .about-us :after {
+      content: "\0020";
+      display: block;
+      height: 0;
+      clear: both;
+      overflow: hidden;
+      visibility: hidden; }
+
+  .about-us + .about-us + .about-us + .about-us + .about-us + .about-us + .about-us + .about-us + .about-us + .about-us {
+    margin-left: 0%;
+    margin-bottom: 1%;
+    clear: both;
+    *zoom: 1; }
+    .about-us + .about-us + .about-us + .about-us + .about-us + .about-us + .about-us + .about-us + .about-us + .about-us :after {
+      content: "\0020";
+      display: block;
+      height: 0;
+      clear: both;
+      overflow: hidden;
+      visibility: hidden; }
+
+  .about-us + .about-us + .about-us + .about-us + .about-us + .about-us + .about-us + .about-us + .about-us + .about-us + .about-us {
+    margin-left: 0%;
+    margin-bottom: 1%;
+    clear: both;
+    *zoom: 1; }
+    .about-us + .about-us + .about-us + .about-us + .about-us + .about-us + .about-us + .about-us + .about-us + .about-us + .about-us :after {
+      content: "\0020";
+      display: block;
+      height: 0;
+      clear: both;
+      overflow: hidden;
+      visibility: hidden; }
+
+  .about-us + .about-us + .about-us + .about-us + .about-us + .about-us + .about-us + .about-us + .about-us + .about-us + .about-us + .about-us {
+    margin-left: 0%;
+    margin-bottom: 1%;
+    clear: both;
+    *zoom: 1; }
+    .about-us + .about-us + .about-us + .about-us + .about-us + .about-us + .about-us + .about-us + .about-us + .about-us + .about-us + .about-us :after {
+      content: "\0020";
+      display: block;
+      height: 0;
+      clear: both;
+      overflow: hidden;
+      visibility: hidden; }
+
+  .gallery {
+    float: left;
+    margin-right: -100%;
+    width: 49.5%; }
+
+  .gallery + .gallery + .gallery {
+    margin-left: 0%;
+    margin-bottom: 1%;
+    clear: both;
+    *zoom: 1; }
+    .gallery + .gallery + .gallery :after {
+      content: "\0020";
+      display: block;
+      height: 0;
+      clear: both;
+      overflow: hidden;
+      visibility: hidden; }
+
+  .gallery + .gallery {
+    margin-left: 50.5%;
+    margin-bottom: 1%;
+    clear: none; }
+
+  .gallery + .gallery + .gallery {
+    margin-left: 0%;
+    margin-bottom: 1%;
+    clear: both;
+    *zoom: 1; }
+    .gallery + .gallery + .gallery :after {
+      content: "\0020";
+      display: block;
+      height: 0;
+      clear: both;
+      overflow: hidden;
+      visibility: hidden; }
+
+  .gallery + .gallery + .gallery + .gallery {
+    margin-left: 50.5%;
+    margin-bottom: 1%;
+    clear: none; }
+
+  .gallery + .gallery + .gallery + .gallery + .gallery {
+    margin-left: 0%;
+    margin-bottom: 1%;
+    clear: both;
+    *zoom: 1; }
+    .gallery + .gallery + .gallery + .gallery + .gallery :after {
+      content: "\0020";
+      display: block;
+      height: 0;
+      clear: both;
+      overflow: hidden;
+      visibility: hidden; }
+
+  .gallery + .gallery + .gallery + .gallery + .gallery + .gallery {
+    margin-left: 50.5%;
+    margin-bottom: 1%;
+    clear: none; }
+
+  .gallery + .gallery + .gallery + .gallery + .gallery + .gallery + .gallery {
+    margin-left: 0%;
+    margin-bottom: 1%;
+    clear: both;
+    *zoom: 1; }
+    .gallery + .gallery + .gallery + .gallery + .gallery + .gallery + .gallery :after {
+      content: "\0020";
+      display: block;
+      height: 0;
+      clear: both;
+      overflow: hidden;
+      visibility: hidden; }
+
+  .gallery + .gallery + .gallery + .gallery + .gallery + .gallery + .gallery + .gallery {
+    margin-left: 50.5%;
+    margin-bottom: 1%;
+    clear: none; }
+
+  .gallery + .gallery + .gallery + .gallery + .gallery + .gallery + .gallery + .gallery + .gallery {
+    margin-left: 0%;
+    margin-bottom: 1%;
+    clear: both;
+    *zoom: 1; }
+    .gallery + .gallery + .gallery + .gallery + .gallery + .gallery + .gallery + .gallery + .gallery :after {
+      content: "\0020";
+      display: block;
+      height: 0;
+      clear: both;
+      overflow: hidden;
+      visibility: hidden; }
+
+  .gallery + .gallery + .gallery + .gallery + .gallery + .gallery + .gallery + .gallery + .gallery + .gallery {
+    margin-left: 50.5%;
+    margin-bottom: 1%;
+    clear: none; }
+
+  .gallery + .gallery + .gallery + .gallery + .gallery + .gallery + .gallery + .gallery + .gallery + .gallery + .gallery {
+    margin-left: 0%;
+    margin-bottom: 1%;
+    clear: both;
+    *zoom: 1; }
+    .gallery + .gallery + .gallery + .gallery + .gallery + .gallery + .gallery + .gallery + .gallery + .gallery + .gallery :after {
+      content: "\0020";
+      display: block;
+      height: 0;
+      clear: both;
+      overflow: hidden;
+      visibility: hidden; }
+
+  .gallery + .gallery + .gallery + .gallery + .gallery + .gallery + .gallery + .gallery + .gallery + .gallery + .gallery + .gallery {
+    margin-left: 50.5%;
+    margin-bottom: 1%;
+    clear: none; }
+
+  .copy {
+    float: left;
+    margin-right: -100%;
+    width: 74.75%; }
+
+  .copy + .copy + .copy {
+    margin-left: 0%;
+    margin-bottom: 1%;
+    clear: both;
+    *zoom: 1; }
+    .copy + .copy + .copy :after {
+      content: "\0020";
+      display: block;
+      height: 0;
+      clear: both;
+      overflow: hidden;
+      visibility: hidden; }
+
+  .copy + .copy {
+    margin-left: 0%;
+    margin-bottom: 1%;
+    clear: both;
+    *zoom: 1; }
+    .copy + .copy :after {
+      content: "\0020";
+      display: block;
+      height: 0;
+      clear: both;
+      overflow: hidden;
+      visibility: hidden; }
+
+  .copy + .copy + .copy {
+    margin-left: 0%;
+    margin-bottom: 1%;
+    clear: both;
+    *zoom: 1; }
+    .copy + .copy + .copy :after {
+      content: "\0020";
+      display: block;
+      height: 0;
+      clear: both;
+      overflow: hidden;
+      visibility: hidden; }
+
+  .copy + .copy + .copy + .copy {
+    margin-left: 0%;
+    margin-bottom: 1%;
+    clear: both;
+    *zoom: 1; }
+    .copy + .copy + .copy + .copy :after {
+      content: "\0020";
+      display: block;
+      height: 0;
+      clear: both;
+      overflow: hidden;
+      visibility: hidden; }
+
+  .copy + .copy + .copy + .copy + .copy {
+    margin-left: 0%;
+    margin-bottom: 1%;
+    clear: both;
+    *zoom: 1; }
+    .copy + .copy + .copy + .copy + .copy :after {
+      content: "\0020";
+      display: block;
+      height: 0;
+      clear: both;
+      overflow: hidden;
+      visibility: hidden; }
+
+  .copy + .copy + .copy + .copy + .copy + .copy {
+    margin-left: 0%;
+    margin-bottom: 1%;
+    clear: both;
+    *zoom: 1; }
+    .copy + .copy + .copy + .copy + .copy + .copy :after {
+      content: "\0020";
+      display: block;
+      height: 0;
+      clear: both;
+      overflow: hidden;
+      visibility: hidden; }
+
+  .copy + .copy + .copy + .copy + .copy + .copy + .copy {
+    margin-left: 0%;
+    margin-bottom: 1%;
+    clear: both;
+    *zoom: 1; }
+    .copy + .copy + .copy + .copy + .copy + .copy + .copy :after {
+      content: "\0020";
+      display: block;
+      height: 0;
+      clear: both;
+      overflow: hidden;
+      visibility: hidden; }
+
+  .copy + .copy + .copy + .copy + .copy + .copy + .copy + .copy {
+    margin-left: 0%;
+    margin-bottom: 1%;
+    clear: both;
+    *zoom: 1; }
+    .copy + .copy + .copy + .copy + .copy + .copy + .copy + .copy :after {
+      content: "\0020";
+      display: block;
+      height: 0;
+      clear: both;
+      overflow: hidden;
+      visibility: hidden; }
+
+  .copy + .copy + .copy + .copy + .copy + .copy + .copy + .copy + .copy {
+    margin-left: 0%;
+    margin-bottom: 1%;
+    clear: both;
+    *zoom: 1; }
+    .copy + .copy + .copy + .copy + .copy + .copy + .copy + .copy + .copy :after {
+      content: "\0020";
+      display: block;
+      height: 0;
+      clear: both;
+      overflow: hidden;
+      visibility: hidden; }
+
+  .copy + .copy + .copy + .copy + .copy + .copy + .copy + .copy + .copy + .copy {
+    margin-left: 0%;
+    margin-bottom: 1%;
+    clear: both;
+    *zoom: 1; }
+    .copy + .copy + .copy + .copy + .copy + .copy + .copy + .copy + .copy + .copy :after {
+      content: "\0020";
+      display: block;
+      height: 0;
+      clear: both;
+      overflow: hidden;
+      visibility: hidden; }
+
+  .copy + .copy + .copy + .copy + .copy + .copy + .copy + .copy + .copy + .copy + .copy {
+    margin-left: 0%;
+    margin-bottom: 1%;
+    clear: both;
+    *zoom: 1; }
+    .copy + .copy + .copy + .copy + .copy + .copy + .copy + .copy + .copy + .copy + .copy :after {
+      content: "\0020";
+      display: block;
+      height: 0;
+      clear: both;
+      overflow: hidden;
+      visibility: hidden; }
+
+  .copy + .copy + .copy + .copy + .copy + .copy + .copy + .copy + .copy + .copy + .copy + .copy {
+    margin-left: 0%;
+    margin-bottom: 1%;
+    clear: both;
+    *zoom: 1; }
+    .copy + .copy + .copy + .copy + .copy + .copy + .copy + .copy + .copy + .copy + .copy + .copy :after {
+      content: "\0020";
+      display: block;
+      height: 0;
+      clear: both;
+      overflow: hidden;
+      visibility: hidden; }
+
+  .full-ad {
+    float: left;
+    margin-right: -100%;
+    width: 83.17%; }
+
+  .full-ad + .full-ad + .full-ad {
+    margin-left: 0%;
+    margin-bottom: 1%;
+    clear: both;
+    *zoom: 1; }
+    .full-ad + .full-ad + .full-ad :after {
+      content: "\0020";
+      display: block;
+      height: 0;
+      clear: both;
+      overflow: hidden;
+      visibility: hidden; }
+
+  .full-ad + .full-ad {
+    margin-left: 0%;
+    margin-bottom: 1%;
+    clear: both;
+    *zoom: 1; }
+    .full-ad + .full-ad :after {
+      content: "\0020";
+      display: block;
+      height: 0;
+      clear: both;
+      overflow: hidden;
+      visibility: hidden; }
+
+  .full-ad + .full-ad + .full-ad {
+    margin-left: 0%;
+    margin-bottom: 1%;
+    clear: both;
+    *zoom: 1; }
+    .full-ad + .full-ad + .full-ad :after {
+      content: "\0020";
+      display: block;
+      height: 0;
+      clear: both;
+      overflow: hidden;
+      visibility: hidden; }
+
+  .full-ad + .full-ad + .full-ad + .full-ad {
+    margin-left: 0%;
+    margin-bottom: 1%;
+    clear: both;
+    *zoom: 1; }
+    .full-ad + .full-ad + .full-ad + .full-ad :after {
+      content: "\0020";
+      display: block;
+      height: 0;
+      clear: both;
+      overflow: hidden;
+      visibility: hidden; }
+
+  .full-ad + .full-ad + .full-ad + .full-ad + .full-ad {
+    margin-left: 0%;
+    margin-bottom: 1%;
+    clear: both;
+    *zoom: 1; }
+    .full-ad + .full-ad + .full-ad + .full-ad + .full-ad :after {
+      content: "\0020";
+      display: block;
+      height: 0;
+      clear: both;
+      overflow: hidden;
+      visibility: hidden; }
+
+  .full-ad + .full-ad + .full-ad + .full-ad + .full-ad + .full-ad {
+    margin-left: 0%;
+    margin-bottom: 1%;
+    clear: both;
+    *zoom: 1; }
+    .full-ad + .full-ad + .full-ad + .full-ad + .full-ad + .full-ad :after {
+      content: "\0020";
+      display: block;
+      height: 0;
+      clear: both;
+      overflow: hidden;
+      visibility: hidden; }
+
+  .full-ad + .full-ad + .full-ad + .full-ad + .full-ad + .full-ad + .full-ad {
+    margin-left: 0%;
+    margin-bottom: 1%;
+    clear: both;
+    *zoom: 1; }
+    .full-ad + .full-ad + .full-ad + .full-ad + .full-ad + .full-ad + .full-ad :after {
+      content: "\0020";
+      display: block;
+      height: 0;
+      clear: both;
+      overflow: hidden;
+      visibility: hidden; }
+
+  .full-ad + .full-ad + .full-ad + .full-ad + .full-ad + .full-ad + .full-ad + .full-ad {
+    margin-left: 0%;
+    margin-bottom: 1%;
+    clear: both;
+    *zoom: 1; }
+    .full-ad + .full-ad + .full-ad + .full-ad + .full-ad + .full-ad + .full-ad + .full-ad :after {
+      content: "\0020";
+      display: block;
+      height: 0;
+      clear: both;
+      overflow: hidden;
+      visibility: hidden; }
+
+  .full-ad + .full-ad + .full-ad + .full-ad + .full-ad + .full-ad + .full-ad + .full-ad + .full-ad {
+    margin-left: 0%;
+    margin-bottom: 1%;
+    clear: both;
+    *zoom: 1; }
+    .full-ad + .full-ad + .full-ad + .full-ad + .full-ad + .full-ad + .full-ad + .full-ad + .full-ad :after {
+      content: "\0020";
+      display: block;
+      height: 0;
+      clear: both;
+      overflow: hidden;
+      visibility: hidden; }
+
+  .full-ad + .full-ad + .full-ad + .full-ad + .full-ad + .full-ad + .full-ad + .full-ad + .full-ad + .full-ad {
+    margin-left: 0%;
+    margin-bottom: 1%;
+    clear: both;
+    *zoom: 1; }
+    .full-ad + .full-ad + .full-ad + .full-ad + .full-ad + .full-ad + .full-ad + .full-ad + .full-ad + .full-ad :after {
+      content: "\0020";
+      display: block;
+      height: 0;
+      clear: both;
+      overflow: hidden;
+      visibility: hidden; }
+
+  .full-ad + .full-ad + .full-ad + .full-ad + .full-ad + .full-ad + .full-ad + .full-ad + .full-ad + .full-ad + .full-ad {
+    margin-left: 0%;
+    margin-bottom: 1%;
+    clear: both;
+    *zoom: 1; }
+    .full-ad + .full-ad + .full-ad + .full-ad + .full-ad + .full-ad + .full-ad + .full-ad + .full-ad + .full-ad + .full-ad :after {
+      content: "\0020";
+      display: block;
+      height: 0;
+      clear: both;
+      overflow: hidden;
+      visibility: hidden; }
+
+  .full-ad + .full-ad + .full-ad + .full-ad + .full-ad + .full-ad + .full-ad + .full-ad + .full-ad + .full-ad + .full-ad + .full-ad {
+    margin-left: 0%;
+    margin-bottom: 1%;
+    clear: both;
+    *zoom: 1; }
+    .full-ad + .full-ad + .full-ad + .full-ad + .full-ad + .full-ad + .full-ad + .full-ad + .full-ad + .full-ad + .full-ad + .full-ad :after {
+      content: "\0020";
+      display: block;
+      height: 0;
+      clear: both;
+      overflow: hidden;
+      visibility: hidden; }
+
+  .wide-section {
+    float: left;
+    margin-right: -100%;
+    width: 91.58%; }
+
+  .wide-section + .wide-section + .wide-section {
+    margin-left: 0%;
+    margin-bottom: 1%;
+    clear: both;
+    *zoom: 1; }
+    .wide-section + .wide-section + .wide-section :after {
+      content: "\0020";
+      display: block;
+      height: 0;
+      clear: both;
+      overflow: hidden;
+      visibility: hidden; }
+
+  .wide-section + .wide-section {
+    margin-left: 0%;
+    margin-bottom: 1%;
+    clear: both;
+    *zoom: 1; }
+    .wide-section + .wide-section :after {
+      content: "\0020";
+      display: block;
+      height: 0;
+      clear: both;
+      overflow: hidden;
+      visibility: hidden; }
+
+  .wide-section + .wide-section + .wide-section {
+    margin-left: 0%;
+    margin-bottom: 1%;
+    clear: both;
+    *zoom: 1; }
+    .wide-section + .wide-section + .wide-section :after {
+      content: "\0020";
+      display: block;
+      height: 0;
+      clear: both;
+      overflow: hidden;
+      visibility: hidden; }
+
+  .wide-section + .wide-section + .wide-section + .wide-section {
+    margin-left: 0%;
+    margin-bottom: 1%;
+    clear: both;
+    *zoom: 1; }
+    .wide-section + .wide-section + .wide-section + .wide-section :after {
+      content: "\0020";
+      display: block;
+      height: 0;
+      clear: both;
+      overflow: hidden;
+      visibility: hidden; }
+
+  .wide-section + .wide-section + .wide-section + .wide-section + .wide-section {
+    margin-left: 0%;
+    margin-bottom: 1%;
+    clear: both;
+    *zoom: 1; }
+    .wide-section + .wide-section + .wide-section + .wide-section + .wide-section :after {
+      content: "\0020";
+      display: block;
+      height: 0;
+      clear: both;
+      overflow: hidden;
+      visibility: hidden; }
+
+  .wide-section + .wide-section + .wide-section + .wide-section + .wide-section + .wide-section {
+    margin-left: 0%;
+    margin-bottom: 1%;
+    clear: both;
+    *zoom: 1; }
+    .wide-section + .wide-section + .wide-section + .wide-section + .wide-section + .wide-section :after {
+      content: "\0020";
+      display: block;
+      height: 0;
+      clear: both;
+      overflow: hidden;
+      visibility: hidden; }
+
+  .wide-section + .wide-section + .wide-section + .wide-section + .wide-section + .wide-section + .wide-section {
+    margin-left: 0%;
+    margin-bottom: 1%;
+    clear: both;
+    *zoom: 1; }
+    .wide-section + .wide-section + .wide-section + .wide-section + .wide-section + .wide-section + .wide-section :after {
+      content: "\0020";
+      display: block;
+      height: 0;
+      clear: both;
+      overflow: hidden;
+      visibility: hidden; }
+
+  .wide-section + .wide-section + .wide-section + .wide-section + .wide-section + .wide-section + .wide-section + .wide-section {
+    margin-left: 0%;
+    margin-bottom: 1%;
+    clear: both;
+    *zoom: 1; }
+    .wide-section + .wide-section + .wide-section + .wide-section + .wide-section + .wide-section + .wide-section + .wide-section :after {
+      content: "\0020";
+      display: block;
+      height: 0;
+      clear: both;
+      overflow: hidden;
+      visibility: hidden; }
+
+  .wide-section + .wide-section + .wide-section + .wide-section + .wide-section + .wide-section + .wide-section + .wide-section + .wide-section {
+    margin-left: 0%;
+    margin-bottom: 1%;
+    clear: both;
+    *zoom: 1; }
+    .wide-section + .wide-section + .wide-section + .wide-section + .wide-section + .wide-section + .wide-section + .wide-section + .wide-section :after {
+      content: "\0020";
+      display: block;
+      height: 0;
+      clear: both;
+      overflow: hidden;
+      visibility: hidden; }
+
+  .wide-section + .wide-section + .wide-section + .wide-section + .wide-section + .wide-section + .wide-section + .wide-section + .wide-section + .wide-section {
+    margin-left: 0%;
+    margin-bottom: 1%;
+    clear: both;
+    *zoom: 1; }
+    .wide-section + .wide-section + .wide-section + .wide-section + .wide-section + .wide-section + .wide-section + .wide-section + .wide-section + .wide-section :after {
+      content: "\0020";
+      display: block;
+      height: 0;
+      clear: both;
+      overflow: hidden;
+      visibility: hidden; }
+
+  .wide-section + .wide-section + .wide-section + .wide-section + .wide-section + .wide-section + .wide-section + .wide-section + .wide-section + .wide-section + .wide-section {
+    margin-left: 0%;
+    margin-bottom: 1%;
+    clear: both;
+    *zoom: 1; }
+    .wide-section + .wide-section + .wide-section + .wide-section + .wide-section + .wide-section + .wide-section + .wide-section + .wide-section + .wide-section + .wide-section :after {
+      content: "\0020";
+      display: block;
+      height: 0;
+      clear: both;
+      overflow: hidden;
+      visibility: hidden; }
+
+  .wide-section + .wide-section + .wide-section + .wide-section + .wide-section + .wide-section + .wide-section + .wide-section + .wide-section + .wide-section + .wide-section + .wide-section {
+    margin-left: 0%;
+    margin-bottom: 1%;
+    clear: both;
+    *zoom: 1; }
+    .wide-section + .wide-section + .wide-section + .wide-section + .wide-section + .wide-section + .wide-section + .wide-section + .wide-section + .wide-section + .wide-section + .wide-section :after {
+      content: "\0020";
+      display: block;
+      height: 0;
+      clear: both;
+      overflow: hidden;
+      visibility: hidden; } }
+
+/*# sourceMappingURL=grid.css.map */

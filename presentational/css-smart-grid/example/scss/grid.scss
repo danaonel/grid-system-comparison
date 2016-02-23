@@ -1,0 +1,17 @@
+@import "../bower_components/bourbon/dist/bourbon.scss";
+
+$columns-break-point:     768px;
+$container-max-width:     1180px;
+
+@import "smart-grid";
+
+$white:     #fff;
+$purple:    #4d2f48;
+
+.container {
+    position: relative;
+    z-index: 1;
+    @media (max-width: $columns-break-point - 1) {
+        padding: 0 20px;
+    }
+}

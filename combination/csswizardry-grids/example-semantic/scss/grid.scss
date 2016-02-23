@@ -1,0 +1,63 @@
+@import "csswizardry-grids.scss";
+
+.content {
+	@extend %grid;
+}
+.smallest-col,
+.small-ad,
+.small-ad-indended,
+.medium-ad,
+.article,
+.large-ad,
+.section,
+.section-indended,
+.details,
+.about-us,
+.gallery,
+.copy,
+.full-ad,
+.wide-section {
+	@extend %grid__item;
+}
+.smallest-col {
+	@extend %one-twelfth;
+}
+.small-ad,
+.small-ad-indended {
+	@extend %two-twelfths;
+}
+.medium-ad {
+	@extend %one-quarter;
+}
+.article {
+	@extend %one-half;
+}
+.large-ad {
+	@extend %one-third;
+}
+.section,
+.section-indended {
+	@extend %two-thirds;
+}
+.details {
+	@extend %five-twelfths;
+}
+.about-us {
+	@extend %seven-twelfths;
+}
+.gallery {
+	@extend %six-twelfths;
+}
+.copy {
+	@extend %three-quarters;
+}
+.full-ad {
+	@extend %ten-twelfths;
+}
+.wide-section {
+	@extend %eleven-twelfths;
+}
+.small-ad-indended,
+.section-indended {
+	@extend %push--one-twelfth;
+}

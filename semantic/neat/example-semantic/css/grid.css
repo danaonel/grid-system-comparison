@@ -1,0 +1,122 @@
+html {
+  box-sizing: border-box; }
+
+*, *::after, *::before {
+  box-sizing: inherit; }
+
+.content {
+  max-width: 1180px;
+  margin-left: auto;
+  margin-right: auto; }
+  .content::after {
+    clear: both;
+    content: "";
+    display: table; }
+
+@media screen and (min-width: 768px) {
+  .smallest-col {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 6.17215%; }
+    .smallest-col:last-child {
+      margin-right: 0; }
+
+  .small-ad {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 14.70196%; }
+    .small-ad:last-child {
+      margin-right: 0; }
+
+  .medium-ad {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 23.23176%; }
+    .medium-ad:last-child {
+      margin-right: 0; }
+
+  .article {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 48.82117%; }
+    .article:last-child {
+      margin-right: 0; }
+
+  .large-ad {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 31.76157%; }
+    .large-ad:last-child {
+      margin-right: 0; }
+
+  .section {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 65.88078%; }
+    .section:last-child {
+      margin-right: 0; }
+
+  .details {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 40.29137%; }
+    .details:last-child {
+      margin-right: 0; }
+
+  .about-us {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 57.35098%; }
+    .about-us:last-child {
+      margin-right: 0; }
+
+  .gallery {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 48.82117%; }
+    .gallery:last-child {
+      margin-right: 0; }
+
+  .copy {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 74.41059%; }
+    .copy:last-child {
+      margin-right: 0; }
+
+  .full-ad {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 82.94039%; }
+    .full-ad:last-child {
+      margin-right: 0; }
+
+  .wide-section {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 91.4702%; }
+    .wide-section:last-child {
+      margin-right: 0; }
+
+  .small-ad-indended {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 14.70196%;
+    margin-left: 8.5298%; }
+    .small-ad-indended:last-child {
+      margin-right: 0; } }
+
+/*# sourceMappingURL=grid.css.map */
